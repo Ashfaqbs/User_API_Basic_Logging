@@ -1,7 +1,7 @@
-#What is Logging and why.
+# What is Logging and why.
 Logging is the process of recording messages, events, or other information about a software application or system. Logging is often used to help troubleshoot problems, monitor the health and performance of an application, and track the activities of an application.
 
-In a Spring Boot project, logging is typically configured using the logback library. Spring Boot provides several convenient features for configuring and managing logging in a project, including the ability to specify the log level, the format of log messages, and the location of log files.
+## In a Spring Boot project, logging is typically configured using the logback library. Spring Boot provides several convenient features for configuring and managing logging in a project, including the ability to specify the log level, the format of log messages, and the location of log files.
 
 There are several reasons why logging is important in a Spring Boot project:
 
@@ -23,11 +23,11 @@ Overall, adding logging to a Spring Boot project can help you understand and man
 
 
 
-#How
+# How
 # User_API_Basic_Logging
 This is a Spring boot project , having user restfull API's , with multiple relationships i.e one to many, and one to one , this project is used to demonstrate the basic logging of a springboot project
 
-Step 1 :
+## Step 1 :
 To configure logging in your Spring Boot application, you can use the application.properties or application.yml file in the src/main/resources directory.
 For example, you can add the following properties to the application.properties file to configure the logging level and output destination:
 
@@ -40,21 +40,21 @@ You can also use a logging framework like log4j, logback, or java.util.logging t
 you will need to include the dependency in your project and configure the logging settings in the application.properties or application.yml file.
 
 
-Step 2 :
+## Step 2 :
 using of logging , in any @Component Class
 
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+             import org.apache.commons.logging.Log;
+             import org.apache.commons.logging.LogFactory;
 
-@Service
-public class MyService {
+              @Service
+           public class MyService {
     
-    private static final Log log = LogFactory.getLog(MyService.class);
+             private static final Log log = LogFactory.getLog(MyService.class);
     
-    public void doSomething() {
-        log.info("Doing something");
-        // ...
-    }
-}
+             public void doSomething() {
+              log.info("Doing something");
+                   // ...
+             }
+            }
 
