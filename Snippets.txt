@@ -1,0 +1,30 @@
+# application.properties
+try =   or : in application.properties stop , build and run to observe the results
+
+always do debug on package level and not class level
+logging.level.org.springframework.web:DEBUG
+or 
+logging.level.org.springframework.web=DEBUG
+
+and you can try this on any library's 
+
+# JPA & Hibernate
+spring.jpa.show-sql=true # Show SQL statements
+spring.jpa.properties.hibernate.format_sql=true # Format SQL in the logs for readability
+logging.level.org.hibernate.SQL=DEBUG # Log all SQL statements
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE # Log prepared statement parameters
+
+# Spring JDBC
+logging.level.org.springframework.jdbc.core.JdbcTemplate=DEBUG # Log JdbcTemplate SQL statements
+logging.level.org.springframework.jdbc.core.StatementCreatorUtils=TRACE # Log Statement parameters
+
+# Spring Data JPA
+logging.level.org.springframework.data.jpa=DEBUG # Log Spring Data JPA repository actions
+
+# Web layer
+logging.level.org.springframework.web=DEBUG # Log web related configs like controllers, requests, etc.
+
+# Your application's package for more granular logging
+logging.level.com.yourapp.package=DEBUG # Replace with your actual package name
+
+# Other critical packages can be added similarly
